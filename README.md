@@ -2,7 +2,7 @@
 
 **Web Route & Subdomain Discovery Tool** — Program Python untuk menemukan semua route/endpoint dan subdomain aktif dari sebuah website.
 
-![SiteRecon Preview](doc.png)
+![SiteRecon Preview](doc1.png)
 
 ---
 
@@ -10,13 +10,13 @@
 
 | Fitur | Deskripsi |
 |-------|-----------|
+| 🎨 **Interactive Menu** | Menjalankan program lebih mudah dengan menu pilihan interaktif |
 | 🕷️ **Route Crawler** | Crawl otomatis semua halaman dan ekstrak path/endpoint |
 | 📄 **robots.txt & sitemap.xml** | Parse otomatis untuk menemukan route yang disembunyikan |
 | ⚡ **JS Route Extractor** | Ekstrak route dari kode JavaScript di halaman |
 | 📝 **Form Endpoint Finder** | Temukan semua form beserta method (GET/POST) |
 | 🌐 **Subdomain DNS Brute-force** | Cek 100+ subdomain umum secara paralel |
-| 🔐 **crt.sh Certificate Transparency** | Cari subdomain dari database sertifikat SSL |
-| 🎯 **HackerTarget API** | Sumber tambahan subdomain dari OSINT |
+| 🔐 **Passive Recon** | Cari subdomain via **crt.sh**, **HackerTarget**, & **AlienVault** |
 | 💾 **Export TXT Report** | Simpan laporan hasil scan ke file .txt yang rapi |
 
 ---
@@ -24,7 +24,8 @@
 ## 🚀 Instalasi
 
 ```bash
-cd SiteRecon
+git clone https://github.com/RifqiArdian09/Siterecon.git
+cd Siterecon
 py -m pip install -r requirements.txt
 ```
 
@@ -32,7 +33,14 @@ py -m pip install -r requirements.txt
 
 ## 📖 Cara Penggunaan
 
-### Scan penuh (route + subdomain)
+### 1. Mode Interaktif (Sangat Direkomendasikan)
+Cukup jalankan program tanpa argumen, dan ikuti instruksi di layar:
+```bash
+py app.py
+```
+
+### 2. Mode Command Line (CLI)
+Jika Anda ingin menggunakan perintah langsung:
 ```bash
 py app.py -u example.com
 ```
